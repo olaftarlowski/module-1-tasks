@@ -1,8 +1,8 @@
-import moment from "moment";
+import { format } from "date-fns";
 
 const printDate = () => {
-  const currentDate = moment().format("MMM Do YYYY");
-  const currentTime = moment().format("h:mm:ss");
+  const currentDate = format(new Date(), "MM-dd-yyy");
+  const currentTime = format(new Date(), "h:mm:ss");
 
   const dateAndTime = { currentDate, currentTime };
 
